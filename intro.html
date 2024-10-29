@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1 - Log Actions</title>
+</head>
+<body>
+    <h1>Welcome to Page 1 - Logging Actions</h1>
+    <p>Perform some actions on this page, and they will be saved and visible on Page 2.</p>
+
+    <script>
+        // Array to store all actions
+        const actionLog = [];
+
+        // Function to log actions
+        function logAction(actionType, details) {
+            const timestamp = new Date().toISOString();
+            actionLog.push({ timestamp, actionType, details });
+            console.log(`Action Recorded: ${actionType}`, details);
+        }
+
+        // Track clicks on the page
+        document.addEventListener('click', (event) => {
+            const target = event.target.tagName;
+            const id = event.target.id ? `#${event.target.id}` : '';
+            const classes = event.target.className ? `.${event.target.className}` : '';
+            logAction('click', `Element: ${target}${id}${classes}`);
+        });
+
+        // Track keypresses
+        document.addEventListener('keypress', (event) => {
+            logAction('keypress', `Key: ${event.key}`);
+        });
+
+        // Save logs to localStorage before leaving the page
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('actionLog', JSON.stringify(actionLog));
+        });
+    </script>
+</body>
+</html>

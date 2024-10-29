@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 2 - View Actions</title>
+</head>
+<body>
+    <h1>Welcome to Page 2 - Recent Actions</h1>
+    <div id="actionLogDisplay">
+        <p>Recent actions from Page 1 will appear here.</p>
+    </div>
+
+    <script>
+        // Retrieve logs from localStorage
+        const savedLog = JSON.parse(localStorage.getItem('actionLog') || '[]');
+
+        // Display logs on the page
+        const actionLogDisplay = document.getElementById('actionLogDisplay');
+        savedLog.forEach(action => {
+            const actionElement = document.createElement('p');
+            actionElement.textContent = `${action.timestamp} - ${action.actionType}: ${action.details}`;
+            actionLogDisplay.appendChild(actionElement);
+        });
+    </script>
+</body>
+</html>

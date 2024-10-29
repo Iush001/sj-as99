@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt - Swarnalaya Jewellers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    /* Receipt Page Styling */
+#receiptSection {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+#receiptSection h2 {
+    text-align: center;
+    color: #ff6600;
+}
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ffb400;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #ff6600;
+}
+
+</style>
+<body>
+    <header>
+        <h1>Swarnalaya Jewellers - Receipt</h1>
+    </header>
+
+    <main id="receiptSection">
+        <h2>Thank you for your purchase!</h2>
+        <p><strong>Customer Name:</strong> <span id="customerName"></span></p>
+        <p><strong>Transaction Date:</strong> <span id="transactionDate"></span></p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="itemList"></tbody>
+        </table>
+
+        <p><strong>Subtotal:</strong> $<span id="subtotal"></span></p>
+        <p><strong>Tax (10%):</strong> $<span id="tax"></span></p>
+        <p><strong>Total:</strong> $<span id="total"></span></p>
+
+        <button onclick="printReceipt()">Print Receipt</button>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

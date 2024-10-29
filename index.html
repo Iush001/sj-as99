@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swarnalaya Jewellers</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- AOS Library for animations on scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Swarnalaya Jewellers</h1>
+        <h4>"Experiencing Luxurious on Every Occasion & Festival"</h4>
+        <h4></h4>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="product.html">Shop</a>
+            <a href="payment.html">Payment</a>
+            <a href="cart.html">My Cart</a>
+        </nav>
+    </header>
+
+    <!-- Banner Section with Dynamic Price -->
+    <div id="banner" data-aos="fade-up">
+        <h2 id="goldPrice">Today's Gold Price: 72000/10gm</h2>
+        <h2 id="silverPrice">Today's Silver Price: 72000/1kg</h2>
+        <h3 id="discount">Today's Discount: 15%off </h3>
+        <h5 id="discount">For More discount visit us</h5>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        
+        <nav>
+        <a href="product.html" class="btn" data-aos="zoom-in">Shop Now</a>
+        </nav>   
+    </section>
+    <header>
+        <h1>Shop Our Collection</h1>
+    </header>
+
+    <main class="products">
+        <div class="product" data-name="Gold Bangles" data-price="62000/-">
+            <img src="images/bangles.jpeg" alt="Gold Necklace">
+            <h3>Gold Bangles</h3>
+            <p>62000/-</p>
+            <button onclick="addToCart('Gold Bangles', 62000)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="Gold Chokar" data-price="120360/-">
+            <img src="images/chokar.jpeg" alt="Jhumka">
+            <h3>Chokar </h3>
+            <p>120360/-</p>
+            <button onclick="addToCart('Gold Chokar', 150000)">Add to Cart</button>
+        </div>
+
+        <div class="product" data-name="Gold Shagun" data-price="4800-33000/-">
+            <img src="images/shagun.jpeg" alt="Gold Bracelet">
+            <h3>Gold Shagun</h3>
+            <p>4800-33000/-</p>
+            <button onclick="addToCart('Gold Shagun', 4800-33000)">Add to Cart</button>
+        </div>
+        <div class="product" data-name="Silver Coin" data-price="1550/-">
+            <img src="images/coins.jpeg" alt="Gold Chain">
+            <h3>Silver coins</h3>
+            <p>1550/-</p>
+            <button onclick="addToCart('Silver Coin', 1550)">Add to Cart</button>
+        </div>
+        <div class="product" data-name="Gold earingset" data-price="120000/-">
+            <img src="images/earingset.jpeg" alt="Gold Pendant">
+            <h3>Gold earingset</h3>
+            <p>120000/-</p>
+            <button onclick="addToCart('Gold earingset', 120000)">Add to Cart</button>
+        </div>
+         
+        <!-- Add more products as needed -->
+       
+    </main>
+       <!-- Footer Section -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h2>About Us</h2>
+            <p>Swarnalaya Jewellers offers an exquisite selection of timeless jewelry. Discover handcrafted designs, perfect for every occasion.
+                "Experiencing luxurious in every occasion and festival"
+            </p>
+        </div>
+        <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p>Email: anitaraaj4u777@gmail.com</p>
+            <p>Phone: +91 9835761556</p>
+            <p>Address: Swarnalaya Jwellers,Purana Bazar Gomoh,Dhanbad(828401) 
+                Landmark: Uphar Studio, Purana Bazar  Gomoh.
+            </p>
+        </div>
+        <div class="footer-section quick-links">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Shop</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Swarnalaya Jewellers | Designed by Swarnalaya Team</p>
+    </div>
+</footer>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

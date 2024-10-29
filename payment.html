@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Swarnalaya Jewellers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Complete Your Purchase</h1>
+    </header>
+
+    <main>
+        <form id="paymentForm">
+            <h2>Select Payment Method</h2>
+            <div id="cardPayment" class="payment-method">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" placeholder="1234 5678 1234 5678" required>
+                <label for="expiryDate">Expiry Date</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" required>
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" placeholder="123" required>
+                <label for="nameOnCard">Name on Card</label>
+                <input type="text" id="nameOnCard" placeholder="John Doe" required>
+            </div>
+
+            <div id="upiPayment" class="payment-method" style="display: none;">
+                <label for="upiId">UPI ID</label>
+                <input type="text" id="upiId" placeholder="example@upi" required>
+            </div>
+
+            <label for="paymentType">Choose Payment Method</label>
+            <select id="paymentType" onchange="togglePaymentMethod()">
+                <option value="card">Credit/Debit Card</option>
+                <option value="upi">UPI Payment</option>
+            </select>
+            <script> alert(`${name} confirm offline first`);</script>
+            <button type="button" onclick="completePayment()">Complete Purchase</button>
+        </form>
+
+        <!-- Receipt Section -->
+        <section id="receipt" style="display: none;">
+            <h2>Receipt</h2>
+            <p id="receiptDetails"></p>
+            <button onclick="printReceipt()">Print Receipt</button>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>Swarnalaya Jewellers offers an exquisite selection of timeless jewelry. Discover handcrafted designs, perfect for every occasion.
+                    "Experiencing luxurious in every occasion and festival"
+                </p>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: anitaraaj4u777@gmail.com</p>
+                <p>Phone: +91 9835761556</p>
+                <p>Address: Swarnalaya Jwellers,Purana Bazar Gomoh,Dhanbad(828401) 
+                    Landmark: Uphar Studio, Purana Bazar  Gomoh.
+                </p>
+            </div>
+            <div class="footer-section quick-links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Swarnalaya Jewellers | Designed by Swarnalaya Team</p>
+        </div>
+    </footer>
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
